@@ -1,0 +1,22 @@
+<template lang="jade">
+    h1 {{ msg }}
+</template>
+
+<script>
+
+    export default ['componentA', {
+        bidings: {},
+        controller: function(){
+            return {
+                msg: 'Working!!'
+            }
+        }
+    }]
+
+</script>
+
+<style>
+    h1 {
+        color: #8f8f8f;
+    }
+</style>

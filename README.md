@@ -1,6 +1,8 @@
 # ng-component-loader <a href="https://www.npmjs.com/package/ng-component-loader"><img src="https://img.shields.io/npm/dt/ng-component-loader.svg" alt="Downloads"></a> <a href="https://www.npmjs.com/package/ng-component-loader"><img src="https://img.shields.io/npm/v/ng-component-loader.svg" alt="Version"></a> <a href="https://www.npmjs.com/package/ng-component-loader"><img src="https://img.shields.io/npm/l/ng-component-loader.svg" alt="License"></a>
 
-`ng-component-loader` is a loader for Webpack that can transform `*.ng` files into [AngularJs Components](https://docs.angularjs.org/guide/component).
+`ng-loader` is a loader for Webpack that can transform `*.ng` files into [AngularJs Components](https://docs.angularjs.org/guide/component).
+
+> Note: ng-loader@1.0.0 has been currently migrated to [ng-module-loader](https://gituhb.com/owen-it/ng-module-loader).
 
 ## What is Webpack?
 
@@ -15,7 +17,7 @@ Learn more about [loaders](https://webpack.js.org/concepts/loaders/).
 ## Install
 
 ```
-npm install --save-dev ng-component-loader 
+npm install --save-dev ng-loader 
 ```
 
 ## Usage
@@ -30,7 +32,7 @@ module.exports = {
     rules: [
       {
         test: /\.ng$/,
-        use: [ 'ng-component-loader' ]
+        use: [ 'ng-loader' ]
       }
     ]
   }
@@ -42,7 +44,7 @@ module.exports = {
 ```
 	{
         test: /\.ng$/, 
-        use: ['ng-component-loader?map=false']
+        use: ['ng-loader?map=false']
     }
 ```
 
@@ -72,24 +74,25 @@ A `*.ng` file is a custom file format that uses HTML-like syntax to describe a a
     <h1>My component {{ $ctrl.description }}</h1>
 </template>
 
+<script>
+
+    export default {
+        controller: () => {
+            this.description = 'AngularJs Component';
+        }
+    };
+
+</script>
+
 <style>
     h1 {
         color: #8f8f8f;
     }
 </style>
 
-<script>
-
-    module.exports = {
-        controller: () => {
-            this.description = 'AngularJs';
-        }
-    };
-
-</script>
 ```
 
-ng-component-loader will parse the file, extract each language block, pipe them through other loaders if necessary, and finally assemble them back into a CommonJS module whose module.exports is a [AngularJs Component](https://docs.angularjs.org/guide/component) options object.
+ng-loader will parse the file, extract each language block, pipe them through other loaders if necessary, and finally assemble them back into a CommonJS module whose module.exports is a [AngularJs Component](https://docs.angularjs.org/guide/component) options object.
 
 ### Language Blocks
 
@@ -113,7 +116,7 @@ ng-component-loader will parse the file, extract each language block, pipe them 
     // tag script inside ng file ./src/components/my-component.ng
     exports default {
         controller: () => {
-            this.description = 'AngularJs';
+            this.description = 'AngularJs Component';
         }
     };
 ```

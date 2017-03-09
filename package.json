@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/owen-it/ng-component-loader.git"
+    "url": "https://github.com/owen-it/ng-loader.git"
   },
   "scripts": {
     "test": "eslint src && mocha test/test.js --slow 5000 --timeout 10000"
@@ -21,9 +21,9 @@
     "index.js",
     "lib"
   ],
-  "homepage": "https://github.com/owen-it/ng-component-loader",
+  "homepage": "https://github.com/owen-it/ng-loader",
   "bugs": {
-    "url": "https://github.com/owen-it/ng-component-loader/issues"
+    "url": "https://github.com/owen-it/ng-loader/issues"
   },
   "author": "Antério Vieira <anteriovieira@gmail.com>",
   "license": "MIT",

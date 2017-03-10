@@ -168,8 +168,8 @@ angular.module('app', []).component.apply(this, myComponent);
 This feature is provided by [ng-hot-reload-api](https://github.com/owen-it/ng-hot-reload-api)
 
 <p align="center">
-    <a href="https://raw.githubusercontent.com/owen-it/ng-component-loader/master/hot-reload.png" target="_blank">
-        <img src="https://raw.githubusercontent.com/owen-it/ng-component-loader/master/hot-reload.png" />
+    <a href="https://raw.githubusercontent.com/owen-it/ng-component-loader/master/hot-reload.gif" target="_blank">
+        <img src="https://raw.githubusercontent.com/owen-it/ng-component-loader/master/hot-reload.gif" />
     </a>
 </p>
 

@@ -71,25 +71,22 @@ A `*.ng` file is a custom file format that uses HTML-like syntax to describe a a
 ```html
 <!-- ./src/components/my-component.ng -->
 <template>
-    <h1>My component {{ $ctrl.description }}</h1>
+    <h1 class="ui header">
+        {{ $ctrl.description }}
+    </h1>
 </template>
 
 <script>
-
     export default {
-        controller: () => {
-            this.description = 'AngularJs Component';
+        controller(){
+            this.description = 'A AngularJs Component!'
         }
-    };
-
+    }
 </script>
 
-<style>
-    h1 {
-        color: #8f8f8f;
-    }
+<style lang="sass">
+    @import '~semantic-ui';
 </style>
-
 ```
 
 ng-loader will parse the file, extract each language block, pipe them through other loaders if necessary, and finally assemble them back into a CommonJS module whose module.exports is a [AngularJs Component](https://docs.angularjs.org/guide/component) options object.
@@ -115,8 +112,8 @@ ng-loader will parse the file, extract each language block, pipe them through ot
 ```js
     // tag script inside ng file ./src/components/my-component.ng
     exports default {
-        controller: () => {
-            this.description = 'AngularJs Component';
+        controller () {
+            this.description = 'A AngularJs Component';
         }
     };
 ```
@@ -141,7 +138,7 @@ You can also return an array with the component data. The first item represents 
     }];
 ```
 
-Registering:
+and register as follows
 
 ```js
 import * as angular from 'angular';
@@ -166,11 +163,25 @@ angular.module('app', []).component.apply(this, myComponent);
 <my-component></my-component>
 ```
 
+### Hot Reload
+
+This feature is provided by [ng-hot-reload-api](https://github.com/owen-it/ng-hot-reload-api)
+
+<p align="center">
+    <a href="https://raw.githubusercontent.com/owen-it/ng-component-loader/master/hot-reload.png" target="_blank">
+        <img src="https://raw.githubusercontent.com/owen-it/ng-component-loader/master/hot-reload.png" />
+    </a>
+</p>
+
 ### Syntax Highlighting
 
 You can treat `*.ng` files as HTML in your editor.
 
-![syntax-highlighting](https://raw.githubusercontent.com/owen-it/ng-component-loader/master/syntax-highlighting.png)
+<p align="center">
+    <a href="https://raw.githubusercontent.com/owen-it/ng-component-loader/master/syntax-highlighting.png" target="_blank">
+        <img src="https://raw.githubusercontent.com/owen-it/ng-component-loader/master/syntax-highlighting.png" />
+    </a>
+</p>
 
 ### License
 

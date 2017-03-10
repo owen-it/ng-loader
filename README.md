@@ -1,4 +1,4 @@
-# ng-loader <a href="https://www.npmjs.com/package/ng-component-loader"><img src="https://img.shields.io/npm/dt/ng-component-loader.svg" alt="Downloads"></a> <a href="https://www.npmjs.com/package/ng-component-loader"><img src="https://img.shields.io/npm/v/ng-component-loader.svg" alt="Version"></a> <a href="https://www.npmjs.com/package/ng-loader"><img src="https://img.shields.io/npm/l/ng-loader.svg" alt="License"></a>
+# ng-loader <a href="https://www.npmjs.com/package/ng-component-loader"><img src="https://img.shields.io/npm/dt/ng-component-loader.svg" alt="Downloads"></a> <a href="https://www.npmjs.com/package/ng-loader"><img src="https://img.shields.io/npm/v/ng-loader.svg" alt="Version"></a> <a href="https://www.npmjs.com/package/ng-loader"><img src="https://img.shields.io/npm/l/ng-loader.svg" alt="License"></a>
 
 `ng-loader` is a loader for Webpack that can transform `*.ng` files into [AngularJs Components](https://docs.angularjs.org/guide/component).
 

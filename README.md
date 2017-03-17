@@ -2,7 +2,7 @@
 
 `ng-loader` is a loader for Webpack that can transform `*.ng` files into [AngularJs Components](https://docs.angularjs.org/guide/component).
 
-> Note: ng-loader@1.0.0 has been currently migrated to [ng-module-loader](https://gituhb.com/owen-it/ng-module-loader).
+> Note: ng-loader@1.0.0 has been currently migrated to [ng-module-loader](https://github.com/owen-it/ng-module-loader).
 
 ## What is Webpack?
 

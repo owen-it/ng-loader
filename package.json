@@ -48,11 +48,11 @@
     "babel-runtime": "^6.0.0"
   },
   "peerDependencies": {
-    "babel-core": "^6.8.0",
-    "babel-loader": "^6.2.4",
-    "css-loader": "^0.26.4",
-    "file-loader": "^0.10.1",
-    "url-loader": "^0.5.8"
+    "babel-core": "*",
+    "babel-loader": "*",
+    "css-loader": "*",
+    "file-loader": "*",
+    "url-loader": "*"
   },
   "devDependencies": {
     "angular": "^1.6.1",

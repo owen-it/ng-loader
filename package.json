@@ -8,7 +8,7 @@
     "url": "https://github.com/owen-it/ng-loader.git"
   },
   "scripts": {
-    "test": "eslint src && mocha test/test.js --slow 5000 --timeout 10000"
+    "test": "mocha test/test.js --slow 5000 --timeout 10000"
   },
   "keywords": [
     "angular",
@@ -86,6 +86,6 @@
     "stylus-loader": "^2.0.0",
     "sugarss": "^0.2.0",
     "url-loader": "^0.5.7",
-    "webpack": "^2.1.0-beta.27"
+    "webpack": "^2.3.2"
   }
 }

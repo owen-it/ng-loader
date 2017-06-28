@@ -40,7 +40,7 @@
     "source-map": "^0.5.6",
     "html-loader": "^0.4.4",
     "de-indent": "^1.0.2",
-    "ng-hot-reload-api": "^0.0.13",
+    "ng-hot-reload-api": "^0.0.14",
     "css-loader": "^0.26.1",
     "style-loader": "^0.13.1",
     "babel-plugin-transform-runtime": "^6.8.0",

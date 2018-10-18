@@ -9,7 +9,7 @@
 webpack is a tool to build JavaScript modules in your application. To start using `webpack` from its [cli](https://webpack.js.org/api/cli) or [api](https://webpack.js.org/api/node), follow the [Installation instructions](https://webpack.js.org/guides/installation).
 webpack simplifies your workflow by quickly constructing a dependency graph of your application and bundling them in the right order. webpack can be configured to customise optimisations to your code, to split vendor/css/js code for production, run a development server that hot-reloads your code without page refresh and many such cool features. Learn more about [why you should use webpack](https://webpack.js.org/guides/why-webpack).
 
-## Understanding Loaders 
+## Understanding Loaders
 
 Loaders are transformations that are applied on a resource file of your application. They are functions (running in Node.js) that take the source of a resource file as the parameter and return the new source.
 Learn more about [loaders](https://webpack.js.org/concepts/loaders/).
@@ -17,7 +17,7 @@ Learn more about [loaders](https://webpack.js.org/concepts/loaders/).
 ## Install
 
 ```
-npm install --save-dev ng-loader 
+npm install --save-dev ng-loader
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ Use the loader either via your Webpack config.
 
 #### Via webpack config (recommended)
 
-```
+```javascript
 module.exports = {
   module: {
     rules: [
@@ -39,13 +39,41 @@ module.exports = {
 }
 ```
 
-#### Passing parameters: 
+#### Passing parameters:
 
-```
-	{
-        test: /\.ng$/, 
-        use: ['ng-loader?map=false']
+You can also configure `ng-loader` and the sub-loaders for your components. Bellow is the default configuration.
+
+```javascript
+{
+  test: /\.ng$/,
+  use: [
+    {
+      loader: 'ng-loader'
+      options: {
+        hotReload: true,
+        loaders: {
+          html: [
+            'html-loader'
+          ],
+          js: [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: ['es2015'],
+                plugins: ['transform-runtime'],
+                comments: false
+              }
+            }
+          ],
+          sass: [
+            'style-loader',
+            'css-loader'
+          ]
+        }
+      }
     }
+  ]
+}
 ```
 
 ### Angular Component

@@ -173,7 +173,7 @@ import * as angular from 'angular';
 
 import myComponent from './components/my-component.ng';
 
-angular.module('app', []).component.apply(this, myComponent);
+angular.module('app', []).component.apply(angular, myComponent);
 
 // ES2015
 // .component(...myComponent)
